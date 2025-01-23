@@ -17,19 +17,6 @@ int get_random_int(int first, int last)
    return first + rand() % (last - first + 1);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 int binary_search(int* arr, int size, int target)
 {
     int left = 0, right = size;
