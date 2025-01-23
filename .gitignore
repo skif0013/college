@@ -1,4 +1,10 @@
 .DS_Store
+
 lesson.dSYM/
 a.out
 .vscode/
+
+.vscode/
+a.out
+lesson.dSYM/
+
