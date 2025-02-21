@@ -74,88 +74,33 @@ int search(int* arr, int size, int target)
 
 struct vector
 {
-    vector() : size(0), capacity(1024), data(0)
+    vector()
     {
-        resize();
-
         std::cout << "vector()" << std::endl;
-    }
-    
-    vector(int _capacity) : size(0), capacity(_capacity), data(0)
-    {
-        resize();
-
-        std::cout << "vector(int)" << std::endl;
     }
 
     ~vector()
     {
-        if (data != 0)
-        {
-            delete[] data;
-        }
-        
         std::cout << "~vector()" << std::endl;
     }
 
     int size;
-    int capacity;
-    int* data;
-
-    void print()
-    {
-        std::cout << "size: " << size << std::endl;
-        std::cout << "capacity: " << capacity << std::endl;
-    }
+    int copasity;
     int get_size()
     {
         return size;
     };
-    int get_capacity()
-    {
-        return capacity;
-    };
-
-    void resize()
-    {
-        if(data == 0)
-        {
-            data = new int[capacity];
-            return;
-        }
-
-        capacity *= 2;
-        int* p = new int[capacity];
-        for(int i = 0; i < size; i++)
-        {
-            p[i] = data[i];
-        }
-
-        delete[] data;
-        
-        data = p;
-    }
-
-    void push_back(int n)
-    {
-        if(size >= capacity)
-        {
-            resize();
-        }
-
-        data[size] = n;
-        size++;
-    }
 };
+
 
 int main()
 {
-    /*
+    
     srand(time(0));
     std::cout << get_random_int() << std::endl;
     std::cout << get_random_int(125) << std::endl;
     std::cout << get_random_int(1, 44) << std::endl;
-	
+	/*
     int length;
     std::cout << "введіть довжину масиву: ";
     std::cin >> length;
@@ -211,33 +156,11 @@ int main()
     */
     
 
-    vector vector1(11);
-
-    vector1.print();
-
-    vector1.push_back(333);
-    vector1.push_back(222);
-    vector1.push_back(111);
-
-
-    for (int i = 0; i < 50; i++)
-    {
-        vector1.push_back(i);
-    }
-    
-    vector1.print();
-
-    for (int i = 0; i < vector1.size; i++)
-    {
-        std::cout << vector1.data[i] << std::endl;
-    }
-    
-
+    vector vector1;
+    vector1.size = 66;
     {
         vector vector2;
-        
-        vector2.print();
     }
-
     std::cout << vector1.get_size() << std::endl;
 }
+// 1
