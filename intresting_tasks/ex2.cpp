@@ -1,7 +1,5 @@
 #include <iostream>
 
-
-
 void pascalTriangle(int n) {
     for (int i = 0; i < n; i++) {
         int* row = new int[i + 1]; 
