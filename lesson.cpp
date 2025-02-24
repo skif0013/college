@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <ctime>
 
+
+// test
 int get_random_int()
 {
     return rand();
